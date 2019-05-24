@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package AlgoritmosDeOrdenamiento;
 
 import Lista.InsertionSort;
 import Lista.LinkedList;
-import Lista.Nodo;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,8 +36,8 @@ public class InsertionSortIT {
     }
 
     /**
-     * Test of Insertion method, of class InsertionSort.
-     */   
+     * testInsertion1 Comprueba que la lista esta vacía
+     */
     @Test
     public void testInsertion1() {
         System.out.println("testInsertion1");
@@ -52,6 +47,9 @@ public class InsertionSortIT {
 
     }
     
+    /**
+     * testInsertion2() Comprueba la cantidad de elementos de tiene la lista
+     */
     @Test
     public void testInsertion2() {
         System.out.println("testInsertion2");
@@ -65,9 +63,12 @@ public class InsertionSortIT {
         insertion.add(8);
         assertEquals(7, insertion.tamano());    
         InsertionSort.Insertion(insertion);
-
+        assertEquals(7, insertion.tamano());
     }
     
+    /**
+     * testInsertion3() Inserta un nuevo valor en el íncice seleccionado
+     */
     @Test
     public void testInsertion3() {
         System.out.println("testInsertion3");
@@ -76,8 +77,12 @@ public class InsertionSortIT {
         insertion.set(0, 99);   
         assertEquals(99, insertion.get(0));
         InsertionSort.Insertion(insertion);
+        assertEquals(99, insertion.get(0));
     }
     
+    /**
+     * testInsertion4() Remueve un nodo según el indice seleccionado
+     */
     @Test
     public void testInsertion4() {
         System.out.println("testInsertion4");
@@ -86,16 +91,21 @@ public class InsertionSortIT {
         insertion.remover(0);
         assertEquals(0 , insertion.tamano());
         InsertionSort.Insertion(insertion);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
     
+    /**
+     * testInsertion5() Comprueba que se ordenó la lista correctamente
+     */
     @Test
     public void testInsertion5() {
         System.out.println("testInsertion5");
-        LinkedList lista = null;
-        InsertionSort.Insertion(lista);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        LinkedList insertion = new LinkedList();
+        insertion.add(2);
+        insertion.add(3);
+        insertion.add(1);
+        InsertionSort.Insertion(insertion);
+        assertEquals(1, insertion.get(0));
+        assertEquals(2, insertion.get(1));
+        assertEquals(3, insertion.get(2));  
     }
 }
