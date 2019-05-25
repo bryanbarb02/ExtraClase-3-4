@@ -3,7 +3,7 @@ package Lista;
 
 /**
  *
- * @author Bryan
+ * @author Kevin Rodriguez
  */
 public class QuickSort {
     
