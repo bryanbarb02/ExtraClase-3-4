@@ -95,6 +95,20 @@ public class LinkedList<T extends Comparable<T>>{
         }
         return noContiene;
     }
+    
+    
+    public int getIndice(T dato) throws NoSuchElementException {
+        int i;
+        if(tamano() == 0) throw new NoSuchElementException("Lista vacía");
+        Nodo temp = cabeza;
+        boolean noContiene=false;
+        for(i = 0; i < tamano() && !noContiene; i++){
+            noContiene = (dato == null ? temp.dato() == null : temp.dato().equals(dato));
+            temp = temp.getSiguiente();
+        }
+        return i;
+    }
+    
 
     /**
      * Devuelve una nueva lista que contiene todos los elementos en esta lista.
