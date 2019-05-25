@@ -7,7 +7,7 @@ package Lista;
 
 /**
  *
- * @author Bryan
+ * @author Fabian Fallas
  */
 public class BubbleSort {
     
