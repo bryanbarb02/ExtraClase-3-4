@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author Bryan
+ * @author Kevin Rodriguez
  */
 public class RadixSort <E extends Integral>{
     //public class MyLinkedList {
